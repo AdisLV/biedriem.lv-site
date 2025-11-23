@@ -31,7 +31,7 @@
     <!-- Kontaktforma -->
     <section class="contact-form">
       <h2>Raksti mums</h2>
-      <form action="https://formspree.io/f/xzzwkaaq" method="POST">
+      <form id="contactForm" action="https://formspree.io/f/xzzwkaaq" method="POST">
         <label for="name">Vārds, Uzvārds:</label>
         <input type="text" id="name" name="name" required>
 
@@ -41,9 +41,6 @@
         <label for="message">Ziņa:</label>
         <textarea id="message" name="message" rows="6" required></textarea>
 
-        <!-- Pilns URL uz paldies.html -->
-        <input type="hidden" name="_next" value="https://arodbiedriba.github.io/biedriem.lv-site/paldies.html">
-
         <button type="submit">Nosūtīt</button>
       </form>
     </section>
@@ -52,5 +49,24 @@
   <footer>
     <p>&copy; 2008 – 2025 Informācijas tehnoloģiju speciālistu arodbiedrība</p>
   </footer>
+
+  <!-- JavaScript pāradresācija -->
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        // Pāradresācija uz paldies.html
+        window.location.href = "paldies.html";
+      } else {
+        alert("Radās kļūda, mēģini vēlreiz!");
+      }
+    });
+  </script>
 </body>
 </html>

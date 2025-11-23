@@ -127,3 +127,25 @@ nav ul li a {
 nav ul li a:hover {
   color: #ffcc00;            /* akcenta krāsa uz hover */
 }
+.content-block {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover – desktop */
+.content-block:hover {
+  background-color: #f0f0f0;
+}
+
+/* Active – klikšķa brīdī */
+.content-block:active {
+  background-color: #e0e0e0;
+}
+
+/* Focus-within – kad sekcijā ir aktīvs elements (piem., forma, teksts) */
+.content-block:focus-within {
+  background-color: #f0f0f0;
+}

@@ -117,6 +117,7 @@ nav ul {
   gap: 20px;                 /* atstarpes starp elementiem */
 }
 
+/* Navigācija */
 nav ul li a {
   color: #fff;               /* balts teksts uz tumši zilā fona */
   text-decoration: none;
@@ -125,8 +126,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffcc00;            /* akcenta krāsa uz hover */
+  color: #ffcc00;             /* akcenta krāsa uz hover */
 }
+
+nav ul li a:active {
+  color: #cc9900;             /* tumšāks tonis klikšķa brīdī */
+}
+
+/* Teksta sekcijas */
 .content-block {
   background-color: #f9f9f9;
   padding: 20px;
@@ -140,7 +147,7 @@ nav ul li a:hover {
   background-color: #f0f0f0;
 }
 
-/* Active – klikšķa brīdī */
+/* Active – klikšķa brīdī (desktop + mobile) */
 .content-block:active {
   background-color: #e0e0e0;
 }

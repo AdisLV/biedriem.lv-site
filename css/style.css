@@ -1,125 +1,82 @@
-/* ==============================
-   Globālie iestatījumi
-============================== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* ===== Pamata stili ===== */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #222;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 0 1rem;
 }
 
-/* ==============================
-   Header
-============================== */
+/* ===== Navigācija un galvene ===== */
 header {
+    background-color: #ffffff;
+    padding: 1.5rem 1rem;
     text-align: center;
-    padding: 2rem 0 1rem 0;
+    border-bottom: 1px solid #ddd;
 }
 
 header h1 {
+    margin: 0;
     font-size: 2rem;
-    margin-bottom: 0.5rem;
 }
 
 header p {
-    font-size: 1.1rem;
+    margin-top: 0.5rem;
     color: #555;
 }
 
-/* ==============================
-   Navigācija
-============================== */
+/* ===== Navigācijas izvēlne ===== */
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
     display: flex;
     justify-content: center;
+    gap: 1rem;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
-    background-color: #222;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
+    color: #007ACC; /* ZILĀ PAMATKRĀSA */
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
 }
 
-nav ul li a:hover {
-    background-color: #555;
-    transform: translateY(-2px);
+nav a:hover {
+    color: #005FA3; /* HOVER TONIS */
 }
 
-/* ==============================
-   Galvenais saturs
-============================== */
-main {
-    flex: 1;
-    max-width: 900px;
-    margin: 2rem auto;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-h2, h3 {
-    margin-bottom: 0.5rem;
-    color: #222;
-}
-
-ul.no-style {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0.5rem;
-}
-
-ul.no-style li {
-    margin-bottom: 0.3rem;
-}
-
-/* ==============================
-   Organizāciju pogas (titullapa)
-============================== */
-.org-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    max-width: 400px;
-    margin: 2rem auto;
-}
-
-.org-list a {
+/* ===== Pogas (galvenā izvēle, organizāciju saraksts) ===== */
+.org-btn,
+.org-list a,
+button,
+.btn {
+    display: block;
     text-decoration: none;
-    background-color: #222;
-    color: #fff;
+    background-color: #007ACC; /* ZILĀ PAMATKRĀSA */
+    color: white;
     padding: 1rem;
     border-radius: 6px;
     font-weight: bold;
     text-align: center;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: 0.3s;
 }
 
-.org-list a:hover {
-    background-color: #555;
-    transform: translateY(-2px);
+.org-btn:hover,
+.org-list a:hover,
+button:hover,
+.btn:hover {
+    background-color: #005FA3; /* HOVER TONIS */
 }
 
-/* Lielākiem ekrāniem: pogas horizontāli */
+/* Organizāciju pogas izkārtojums */
+.org-list {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 @media (min-width: 600px) {
     .org-list {
         flex-direction: row;
@@ -129,39 +86,25 @@ ul.no-style li {
     }
 }
 
-/* ==============================
-   Footer
-============================== */
-footer {
-    margin-top: 2rem;
-    font-size: 0.85rem;
-    color: #222;
-    background-color: #e0e0e0; /* viegli pelēks fonā */
+/* ===== Saturs ===== */
+main {
     padding: 1rem;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #ccc;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* ==============================
-   Responsīvais teksts un attālumi
-============================== */
-@media (max-width: 599px) {
-    header h1 {
-        font-size: 1.6rem;
-    }
+.no-style {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    header p {
-        font-size: 1rem;
-    }
-
-    nav ul li a {
-        padding: 0.7rem 1rem;
-        font-size: 0.95rem;
-    }
-
-    .org-list a {
-        font-size: 1rem;
-        padding: 0.8rem;
-    }
+/* ===== Kājene ===== */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    background-color: #f5f5f5;
+    color: #444;
 }

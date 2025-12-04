@@ -3,53 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Informācijas tehnoloģiju speciālistu arodbiedrība</title>
-  <!-- Atsauce uz stilu failu mapē css/ -->
-  <link rel="stylesheet" href="css/style.css">
+  <title>Partneru organizācijas</title>
+  <style>
+    /* Pamatstils */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .org-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .org-list a {
+      text-decoration: none;
+      text-align: center;
+      padding: 1rem 1.5rem;
+      background-color: #0073e6;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .org-list a:hover {
+      background-color: #005bb5;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.875rem;
+      color: #999;
+      background-color: #ffffff;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+    }
+
+    @media (min-width: 600px) {
+      .org-list {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .org-list a {
+        flex: 1;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Informācijas tehnoloģiju speciālistu arodbiedrība</h1>
-    <p>Profesionāla kopiena, kas apvieno IT jomas darbiniekus Latvijā</p>
-    <!-- Navigācija header iekšpusē -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Sākums</a></li>
-        <li><a href="about.html">Par mums</a></li>
-        <li><a href="contact.html">Kontakti</a></li>
-        <li><a href="partners.html">Partneri</a></li>
-      </ul>
-    </nav>
+    <h1>Partneru organizācijas</h1>
+    <p>Izvēlieties organizāciju, kurai vēlaties pāriet:</p>
   </header>
 
   <main>
-    <section>
-      <p>Mūsu mērķis ir aizstāvēt biedru intereses, veicināt zināšanu apmaiņu un attīstīt digitālās prasmes.</p>
-    </section>
-
-    <section>
-      <h2>Biedru naudas iemaksas un ziedojumi</h2>
-      <ul class="no-style">
-        <li><strong>Saņēmējs:</strong> Informācijas tehnoloģiju speciālistu arodbiedrība</li>
-        <li><strong>Reģ. Nr.:</strong> 40008132645</li>
-        <li><strong>Banka:</strong> AS "Citadele banka"</li>
-        <li><strong>Kods:</strong> PARXLV22</li>
-        <li><strong>Konts:</strong> LV21 PARX 0027 4685 7000 1</li>
-      </ul>
-
-      <h3>Maksājuma mērķis:</h3>
-      <ul class="no-style">
-        <li>Biedru naudas iemaksa</li>
-        <li>Ziedojums praktikantu apmācību procesa nodrošināšanai</li>
-        <li>Ziedojums mājas lapas uzturēšanai</li>
-        <li>Ziedojums IT speciālistu kvalifikācijas celšanas kursiem</li>
-        <li>Cits mērķis</li>
-      </ul>
-    </section>
+    <div class="org-list">
+      <a href="https://www.npa.lv" target="_blank">Neatkarīgā policistu arodbiedrība</a>
+      <a href="https://www.itsa.lv" target="_blank">Informācijas tehnoloģiju speciālistu arodbiedrība</a>
+      <a href="https://www.lja.lv" target="_blank">Latviešu juristu apvienība</a>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2008–2025 Informācijas tehnoloģiju speciālistu arodbiedrība</p>
+    &copy; 2008–2025 Partneru organizācijas
   </footer>
 </body>
 </html>
